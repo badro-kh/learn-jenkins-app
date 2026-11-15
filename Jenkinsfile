@@ -1,3 +1,6 @@
+
+Jenkinsfile.txt
+100%
 pipeline {
     agent any
 
@@ -37,4 +40,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            junit 'test-results/junit.xml'
+        }
+    }
 }
+Displaying Jenkinsfile.txt.
